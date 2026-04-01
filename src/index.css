@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --desert-sand: #F4EBD0;
+  --minty-emerald: #D1E8E2;
+  --barakah-gold: #D4AF37;
+}
+
+body {
+  font-family: 'Quicksand', sans-serif;
+  @apply bg-[#F4EBD0]/30 antialiased text-slate-800 transition-colors duration-500;
+}
+
+@layer components {
+  .clay-button {
+    @apply bg-white rounded-[2rem] shadow-[8px_8px_16px_#e5ddd0,-8px_-8px_16px_#ffffff] hover:shadow-[10px_10px_20px_#e5ddd0,-10px_-10px_20px_#ffffff] active:shadow-[inset_4px_4px_8px_#e5ddd0,inset_-4px_-4px_8px_#ffffff] active:scale-[0.98] transition-all duration-300;
+  }
+  
+  .clay-card {
+    @apply bg-white/80 backdrop-blur-xl rounded-[3rem] shadow-[15px_15px_30px_#e5ddd0,-15px_-15px_30px_#ffffff] border-4 border-white/60;
+  }
+
+  .clay-input {
+    @apply bg-white/60 rounded-2xl border-none shadow-[inset_4px_4px_8px_#e5ddd0,inset_-4px_-4px_8px_#ffffff] focus:ring-4 focus:ring-[#D1E8E2]/50 transition-all;
+  }
+
+  .glass-effect {
+    @apply bg-white/40 backdrop-blur-md border border-white/40;
+  }
+  
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+}
+
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 6px;
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  height: 6px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  @apply bg-[#D1E8E2] rounded-full hover:bg-[#D1E8E2]/80 transition-colors;
+}
+
+.receipt-pattern {
+  background-image: radial-gradient(#D1E8E2 1px, transparent 1px);
+  background-size: 10px 10px;
+}
